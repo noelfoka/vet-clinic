@@ -1,7 +1,5 @@
 # Vet clinic database
 
-![Alt big picture](/queries.PNG)
-
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
