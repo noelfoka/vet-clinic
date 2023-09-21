@@ -38,3 +38,11 @@ UPDATE animals SET species_id = (
         ELSE (SELECT id FROM species WHERE name = 'Pokemon')
     END
 );
+
+update animals set owner_id = case
+when name = 'Agumon' then 1
+when name in ('Gabumon', 'Pikachu') then 2
+when name in ('Devimon', 'Plantmon') then 3
+when name in ('Charmander', 'Squirtle', 'Blossom') then 4
+when name in ('Angemon', 'Boarmon') then 5
+end;
