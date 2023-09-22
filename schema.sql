@@ -22,6 +22,8 @@ CREATE TABLE species (
 	name VARCHAR(155)
 );
 
+ALTER TABLE animals ADD CONSTRAINT animal_id UNIQUE (id);
+
 ALTER TABLE animals
 DROP species,
 ADD COLUMN species_id INTEGER,
@@ -48,4 +50,11 @@ CREATE TABLE specializations (
 	CONSTRAINT fk_vets
 		FOREIGN KEY (vet_id)
 			REFERENCES vets(id)
+);
+
+CREATE TABLE visits (
+    id serial PRIMARY KEY,
+    animal_id INTEGER REFERENCES animals(id),
+    vet_id INTEGER REFERENCES vets(id),
+    date_of_visit DATE
 );
