@@ -46,3 +46,9 @@ when name in ('Devimon', 'Plantmon') then 3
 when name in ('Charmander', 'Squirtle', 'Blossom') then 4
 when name in ('Angemon', 'Boarmon') then 5
 end;
+
+INSERT INTO vets(name, age, date_of_graduation) VALUES
+('Vet William Tatcher', 45, '2000-04-23'),
+('Vet Maisy Smith', 26, '2019-01-17'),
+('Vet Stephanie Mendez', 64, '1981-05-04'),
+('Vet Jack Harkness', 38, '2008-06-08');
