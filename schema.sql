@@ -37,3 +37,15 @@ CREATE TABLE vets (
 	age INTEGER,
 	date_of_graduation DATE
 );
+
+CREATE TABLE specializations (
+	species_id INTEGER,
+	vet_id INTEGER,
+	PRIMARY KEY (species_id, vet_id),
+	CONSTRAINT fk_species
+		FOREIGN KEY (species_id)
+			REFERENCES species(id),
+	CONSTRAINT fk_vets
+		FOREIGN KEY (vet_id)
+			REFERENCES vets(id)
+);
